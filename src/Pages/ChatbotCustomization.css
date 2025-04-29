@@ -1,0 +1,313 @@
+.customization-panel {
+  flex: 1;
+  /* background-color: white; */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.panel-section {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.panel-section:last-child {
+  border-bottom: none;
+}
+
+.panel-section h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.color-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.color-swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.color-swatch.active {
+  border-color: #3347b5;
+}
+
+.color-swatch.white {
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+.color-swatch.black {
+  background-color: black;
+}
+
+.color-swatch.navy {
+  background-color: #3347b5;
+}
+
+.color-swatch.light-gray {
+  background-color: #eeeeee;
+}
+
+.color-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-preview {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.color-preview.navy {
+  background-color: #3347b5;
+}
+
+.color-preview.light-gray {
+  background-color: #eeeeee;
+}
+
+.color-input input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  width: 100px;
+}
+
+.editable-message {
+  background-color: #f5f5f5;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.edit-button {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+}
+
+.form-preview {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.welcome-preview {
+  background-color: #f5f5f5;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.welcome-preview p {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.timer-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.timer-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.timer-group input {
+  width: 40px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.save-button {
+  padding: 8px 20px;
+  background-color: #3347b5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  align-self: flex-end;
+}
+.customization-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.panel-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.panel-section {
+  margin-bottom: 20px;
+}
+
+.panel-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.color-options {
+  display: flex;
+  gap: 10px;
+}
+
+.color-swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.color-swatch.white {
+  background-color: white;
+}
+
+.color-swatch.black {
+  background-color: black;
+}
+
+.color-swatch.navy {
+  background-color: #3347b5;
+}
+
+.color-swatch.light-gray {
+  background-color: #eaeaea;
+}
+
+.color-swatch.active {
+  border: 2px solid #3347b5;
+}
+
+.color-input {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.color-preview {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.color-preview.white {
+  background-color: white;
+}
+
+.color-preview.black {
+  background-color: black;
+}
+
+.color-preview.navy {
+  background-color: #3347b5;
+}
+
+.color-preview.light-gray {
+  background-color: #eaeaea;
+}
+
+.editable-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.edit-button {
+  background: none;
+  border: none;
+  color: #3347b5;
+  cursor: pointer;
+}
+
+.form-preview .form-group {
+  margin-bottom: 15px;
+}
+
+.form-preview .form-group label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.form-preview input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3347b5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.welcome-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timer-inputs .timer-group {
+  display: flex;
+  align-items: center;
+}
+
+.timer-group input {
+  width: 40px;
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.save-button {
+  padding: 10px;
+  background-color: #3347b5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

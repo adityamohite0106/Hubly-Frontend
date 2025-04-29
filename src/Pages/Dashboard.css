@@ -1,0 +1,120 @@
+.dashboard {
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    width: 100%;
+    
+
+  }
+  
+  .searchInput {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tabs button {
+    background: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .activeTab {
+    border-bottom: 2px solid #0b5ed7;
+    color: #0b5ed7;
+  }
+  
+  .ticketCard {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  
+  .ticketHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .statusDot {
+    width: 10px;
+    height: 10px;
+    background-color: #f4c542;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .ticketNumber {
+    flex-grow: 1;
+    font-weight: bold;
+  }
+  
+  .postedTime {
+    font-size: 0.8rem;
+    color: #999;
+  }
+  
+  .ticketMessage {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .ticketFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    border-top: 1px solid #eee;
+    padding-top: 0.5rem;
+  }
+  
+  .userInfo {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .email {
+    font-size: 0.8rem;
+    color: #777;
+  }
+  
+  .ticketTime {
+    text-align: right;
+  }
+  
+  .openTicket {
+    margin-left: 10px;
+    
+    border: none;
+    background: none;
+    display: inline-block;
+    margin-top: 0.25rem;
+    color: #0b5ed7;
+    font-size: .85rem;
+    text-decoration: none;
+}
+  

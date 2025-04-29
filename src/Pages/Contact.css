@@ -1,0 +1,165 @@
+.contact-center {
+  display: flex;
+ width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar2 {
+  width: 20%;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar2 h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.chats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.chat:hover {
+  background-color: #e6e6e6;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+
+.chat-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.chat-message {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+
+
+.chat-main {
+    margin: auto;
+   
+    height: 500px;
+    width: 40%;
+    display: flex
+;
+    flex-direction: column;
+    border-right: 1px solid #ccc;
+}
+
+.chat-header {
+  padding: 1rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.chat-msg {
+  background: #f1f1f1;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user-name {
+  font-weight: bold;
+  margin: 0 0 0.5rem;
+}
+
+.user-msg {
+  margin: 0 0 0.5rem;
+}
+
+.chat-date {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.chat-footer {
+  display: flex;
+  
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+}
+.chat-footer form {
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 0.5rem;
+}
+
+.chat-footer button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.chat-details {
+  width: 30%;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+.details-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.avatar-large {
+  width: 45px;
+  height: 45px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+
+.details-body h4 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.details-body input,
+.details-body select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}

@@ -1,0 +1,260 @@
+/* EntryChatbot.css */
+
+.EntryChatbot-container {
+    width: 350px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .EntryChatbot-header {
+    background-color: #213c58;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .EntryChatbot-header img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .EntryChatbot-header h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .EntryChatbot-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+  }
+  
+  .message {
+    padding: 10px;
+    border-radius: 12px;
+    max-width: 80%;
+    font-size: 14px;
+  }
+  
+  .bot-message {
+    background-color: #ffffff;
+    align-self: flex-start;
+    color: #333;
+  }
+  
+  .user-message {
+    background-color: #d1e7ff;
+    align-self: flex-end;
+    color: #333;
+  }
+  
+  .EntryChatbot-form {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; 
+    margin-top: 10px;
+  }
+
+  
+  .message-form {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between the input and the button */
+  }
+  
+  .message-form input {
+    width: 80%;  /* Adjusts the width of the input field */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .send-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .send-button img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .EntryChatbot-form h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .EntryChatbot-form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .EntryChatbot-form button {
+    background-color: #213c58;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .EntryChatbot-form button:hover {
+    background-color: #1b3149;
+  }
+  
+  .EntryChatbot-footer {
+    display: flex;
+    justify-content: flex-start;  /* Aligns the form horizontally */
+    align-items: center; /* Centers content vertically if needed */
+    position: absolute;
+    bottom: 10px; /* Places the footer at the bottom of the container */
+    left: 10px;  /* Optional: To give some space from the left */
+    right: 10px; /* Optional: To give some space from the right */
+    padding: 10px;
+  }
+  .EntryChatbot-footer {
+    display: flex;
+    justify-content: flex-start;  /* Aligns the form horizontally */
+    align-items: center; /* Centers content vertically */
+    position: absolute;
+    bottom: 10px; /* Places the footer at the bottom of the container */
+    left: 10px;  /* Optional: To give some space from the left */
+    right: 10px; /* Optional: To give some space from the right */
+    padding: 10px;
+  }
+  
+  .message-form {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensures the form stretches to take available space */
+  }
+  
+  .message-form input {
+    width: 90%; /* Adjusts the width of the input field */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Space between the input and send button */
+  }
+  
+  .send-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .send-button img {
+    width: 24px;
+    height: 24px;
+  }
+  .EntryChatbot-footer {
+    display: flex;
+    justify-content: flex-start; /* Aligns the form horizontally */
+    align-items: center; /* Centers content vertically */
+    position: absolute;
+    bottom: 30px; /* Places the footer at the bottom of the container */
+    left: 10px;  /* Optional: To give some space from the left */
+    right: 10px; /* Optional: To give some space from the right */
+    padding: 10px;
+  }
+  
+  .message-form {
+    display: flex;
+    width: 100%; /* Ensures the form stretches to take available space */
+    align-items: center; /* Ensures items inside the form are vertically aligned */
+  }
+  
+  .message-form input {
+    flex-grow: 1; /* Makes the input take available space */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Space between the input and send button */
+  }
+  
+  .send-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .send-button img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .EntryChatbot-footer form {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .EntryChatbot-footer input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .EntryChatbot-footer button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #213c58;
+  }
+  
+  .EntryChatbot-footer button:hover {
+    color: #1b3149;
+  }
+  .chatbot-toggle {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    background-color: #213c58;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+  }
+  
+  .chatbot-toggle:hover {
+    background-color: #1b3149;
+  }
+  
