@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "../Pages/Signin.css";
-// import "/src/Mobile/MobileSignin.css";
+import "./Signin.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { signin } from "@/api"; // Import signin from API client
 
 const Signin = () => {
   const [formData, setFormData] = useState({
@@ -13,7 +13,7 @@ const Signin = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
   const [alertType, setAlertType] = useState("");
-  const [loading, setLoading] = useState(false); // Added to prevent multiple submits
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -44,59 +44,29 @@ const Signin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!validateForm() || loading) return; // Prevent if invalid or already submitting
+    if (!validateForm() || loading) return;
     setLoading(true);
 
     try {
+      const data = await signin(formData.identifier.trim(), formData.password);
 
-      const controller = new AbortController(); // Define controller for timeout
-      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
-
-      const response = await fetch('/api/auth/signin', { // Changed from VITE_API_BASE_URL
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          identifier: formData.identifier.trim(),
-          password: formData.password,
-        }),
-        credentials: 'include',
-        signal: controller.signal,
-      });
-      
-
-      clearTimeout(timeoutId); // Clear timeout if response is fast
-
-      const data = await response.json();
-     
-
-      if (response.ok) {
-       
-        localStorage.setItem("token", data.token);
-        localStorage.setItem("username", data.user.firstName);
-        localStorage.setItem("email", data.user.email);
-        setAlertMessage(`✅ Welcome, ${data.user.firstName}! Login Successful.`);
-        setAlertType("success");
-        setTimeout(() => {
-          setAlertMessage("");
-          navigate("/app");
-        }, 2000);
-      } else {
-       
-        setAlertMessage(`❌ ${data.error || "Invalid credentials. Please try again."}`);
-        setAlertType("error");
-        setTimeout(() => setAlertMessage(""), 3000);
-      }
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("username", data.user.firstName);
+      localStorage.setItem("email", data.user.email);
+      setAlertMessage(`✅ Welcome, ${data.user.firstName}! Login Successful.`);
+      setAlertType("success");
+      setTimeout(() => {
+        setAlertMessage("");
+        navigate("/app");
+      }, 2000);
     } catch (error) {
-     
       setAlertMessage(
-        error.name === "AbortError"
-          ? "⚠️ Server took too long to respond. Please try again."
-          : "⚠️ Server error! Please try again later."
+        error.response?.data?.error || "⚠️ Server error! Please try again later."
       );
       setAlertType("error");
-      setTimeout(() => setAlertMessage(""), 30000);
+      setTimeout(() => setAlertMessage(""), 3000);
     } finally {
-      setLoading(false); // Re-enable button
+      setLoading(false);
     }
   };
 
@@ -109,7 +79,6 @@ const Signin = () => {
       )}
       <div className="logo2">
         <img src="/images/logo1.png" alt="Logo" />
-       
       </div>
       <div className="signin-left">
         <div className="signin-box">
